@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for c in pic %}
+<div class="container">
+<div class="card" style="width:420px; margin-left:25%; margin-right:25%;">
+  <a href="#" class="card-header" style="color:black;text-decoration:none;">
+    <p><b>{{c.profile.name}}</b></p>
+  </a>
+  <a href="/picture/{{c.id}}" class="card-image"style="width:100%;height:100%;object-fit:cover">
+    <img src="{{c.image.url}}" alt="image" style="width: 400px; height:400px; border:2px hidden;padding-left:15px;">
+  </a>
+  <div class="card-footer" style="border:hidden;">
+    <a href="{% url 'like' operation='like' pk=c.id %}" id="like"><i class="fas fa-heart"></i></a>{{c.likes.likes}}
+    <a href="/new/comment/{{c.id}}"><i class="far fa-comment"></i></a>
+    <p><b>{{c.profile.name}}</b> {{c.image_caption}}</p>
+  </div>
+</div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
