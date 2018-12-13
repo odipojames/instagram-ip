@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for c in item %}
+<div class="container">
+
+<div class="card" style="width:420px; margin-left:25%; margin-right:25%;">
+  <div class="card-image" style="width:100%;height:100%;object-fit:cover">
+    <img src="{{c.image.url}}" alt="image" style="width: 400px; height:400px; border:2px hidden;padding-left:15px;">
+  </div>
+  <div class="card-footer" style="border:hidden;">
+    <p><b>{{c.profile.name}}</b> {{c.image_caption}}</p>
+    <i>comments</i>
+    {% for m in c.opinions.all %}
+    <ul>
+      <li>{{m.comments}}</li>
+    </ul>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
