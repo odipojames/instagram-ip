@@ -1,0 +1,3 @@
+Hello {{name}}
+
+Welcome to James's version of Instagram. You will find a new experience. ENJOY
