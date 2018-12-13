@@ -42,7 +42,7 @@ class Like(models.Model):
 class Comment(models.Model):
     comments =models.CharField(max_length= 80,blank= True)
     post_by = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey('app.Image', on_delete=models.CASCADE, related_name='opinions')
+    post = models.ForeignKey('instagram.Image', on_delete=models.CASCADE, related_name='opinions')
 
     def __str__(self):
         return self.comments
