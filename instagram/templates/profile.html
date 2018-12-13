@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    {% for h in human %}
+    <div class="row">
+      {% autoescape on %}
+      {{image.post| safe}}
+      {% endautoescape %}
+    </div>
+    <div class="row">
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img src="{{h.profile_photo.url}}" alt="" class="responsive" style="width: 40px; height:40px;margin-top:10px;margin-bottom:10px;; border:2px hidden; border-radius: 50%;">
+      </div>
+      <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+
+      </div>
+      <div class="card container-fluid" style="border:hidden;">
+        <div class="card-body">
+          <p>{{h.bio}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+      <div class="container">
+        <div class="row" style="display:flex;">
+          {% for p in posts %}
+          <div class="column-md-4" style="float:left; width:33.33%;padding: 5px;">
+            <a href="/picture/{{p.id}}">
+            <img src="{{p.image.url}}" alt="" class="img-fluid" style="width: 400px; height:400px; border:2px hidden;">
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+
+{% endblock %}
