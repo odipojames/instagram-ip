@@ -2,7 +2,7 @@
 
 ## Author
 
-**Daniel Mutai**
+**James Odipo**
 
 **Description**
 
