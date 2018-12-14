@@ -2,10 +2,10 @@
 {% load bootstrap4 %}
 
 {% block content %}
-<div class="container">
+<div class="container"style="background-color:#C82479">
   <div class="row">
     <!-- Empty div -->
-    <div class="col-md-4"></div>
+    <div class="col-md-4"style="background-image:url('/static/images/instagram.jpeg')"></div>
     <div class="col-md-4">
       {% if form.errors %}
         <p> Password or Username is incorrect </p>
@@ -15,7 +15,8 @@
         <div class="panel-heading">
           <h2 class="text-center" style="font-family:'Meera Inimai', sans-serif,'Cookie', cursive;">Sign in</h2>
         </div>
-        <div class="panel-body">
+        <div class="panel-body"
+        style="background-image:url('/static/images/ss.jpeg')">
 
           <form  action="/accounts/login/" method="post">
             {% csrf_token %}
@@ -37,7 +38,7 @@
 
     </div>
     <!-- empty div -->
-    <div class="col-md-4"></div>
+    <div class="col-md-4" style="background-image:url('/static/images/instagram.jpeg')"></div>
   </div>
 </div>
 
