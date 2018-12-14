@@ -10,13 +10,13 @@
   {% if user.is_authenticated %}
   <ul class="navbar-nav mr-auto d-flex justify-content-between">
     <li class="nav-item">
-        <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-home fa-2x" style="color:white;padding-bottom:5px;padding-top:0;"></i> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-home fa-2x" style="color:blue;padding-bottom:5px;padding-top:0;" data-toggle="tooltip" data-placement="bottom" title="Home"></i> <span class="sr-only">(current)</span></a>
     </li>
     <li>
-      <a href="{% url 'search'%}"><i class="fa fa-search fa-2x" style="color:white;"></i></a>
+      <a href="{% url 'search'%}"><i class="fa fa-search fa-2x" style="color:blue;" data-toggle="tooltip" data-placement="bottom" title="search here" ></i></a>
     </li>
     <li class="nav-item">
-      <a href="{% url 'new_post' %}"><i class="fa fa-plus-square fa-2x" style="color:white;"></i></a>
+      <a href="{% url 'new_post' %}"><i class="fa fa-plus-square fa-2x" style="color:blue;" data-toggle="tooltip" data-placement="bottom" title="post new picture"></i></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="/profile/{{user.username}}">{{user.username}}</a>
